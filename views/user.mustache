@@ -14,8 +14,8 @@
       <span>{{address.city}},</span> {{#job}}<span> {{job}}, {{company}}</span>{{/job}}
       {{^job}}<span class="nojob">Available for hire</span>{{/job}}
       <p class = "emailphone">{{email}} | {{phone}}</p>
-      <p class = "userschool">Education: {{university}}</p>
-      <span>Skills:</span>
+      <p class = "userschool"><strong>Education:</strong> {{university}}</p>
+      <span><strong>Skills:</strong></span>
       <ul style = "list-style: none" class = "skillscol">
         {{#skills}}<li class = "userskills">{{.}}</li>{{/skills}}
       </ul>
