@@ -10,15 +10,22 @@
       <div class="picture">
       <img src="{{avatar}}" class = "userimg">
       </div>
-      <h3 class = "username">{{name}}</h3>
-      <span>{{address.city}},</span> {{#job}}<span> {{job}}, {{company}}</span>{{/job}}
-      {{^job}}<span class="nojob">Available for hire</span>{{/job}}
-      <p class = "emailphone">{{email}} | {{phone}}</p>
-      <p class = "userschool"><strong>Education:</strong> {{university}}</p>
-      <span><strong>Skills:</strong></span>
-      <ul style = "list-style: none" class = "skillscol">
-        {{#skills}}<li class = "userskills">{{.}}</li>{{/skills}}
-      </ul>
+      <div class="userinfo">
+        <h3 class = "username">{{name}}</h3>
+        {{#address.city}}<span>{{address.city}}, {{address.country}} |</span>{{/address.city}}
+        {{^address.city}}{{/address.city}}
+        {{#job}}<span> {{job}}, {{company}}</span>{{/job}}
+        {{^job}}<span class="nojob">Available for hire</span>{{/job}}
+        <p class = "emailphone">{{email}} | {{phone}}</p>
+      </div>
+      <div class="useredandskills">
+        {{#university}}<p class = "userschool"><strong>Education:</strong> {{university}}</p>{{/university}}
+        {{^university}}{{/university}}
+        <span><strong>Skills:</strong></span>
+        <ul style = "list-style: none" class = "skillscol">
+          {{#skills}}<li class = "userskills">{{.}}</li>{{/skills}}
+        </ul>
+      </div>
     </div>
   </body>
 </html>
